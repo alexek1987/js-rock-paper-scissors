@@ -28,21 +28,25 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
+
 }
 
 .result-score {
   margin-left: .1rem;
   font-size: 3rem;
   color: #333;
+
 }
 
 .result-history {
   opacity: .5;
+  margin-right: 12px;
 }
 
 .result-history.winner {
   opacity: 1;
   font-size: 3.5rem;
+  margin-right: 12px;
 }
 
 .result-score-emoji {
