@@ -1,16 +1,10 @@
-/* Handheld. Handles both portrait and landscape. */
-@media (min-width: 320px) and (max-width: 568px) {
 
-}
-
-/* Tablet. Handles both portrait and landscape. */
-@media (min-width: 600px) and (max-width: 800px) {
-
-}
 
 body {
   background-color: #ccc;
 }
+
+
 
 .selections {
   display: flex;
@@ -50,13 +44,13 @@ body {
 
 .result-history {
   opacity: .5;
-  margin-right: 12px;
+  margin-right: 3px;
 }
 
 .result-history.winner {
   opacity: 1;
   font-size: 3.5rem;
-  margin-right: 12px;
+  margin-right:4px;
 }
 
 .result-score-emoji {
@@ -64,3 +58,21 @@ body {
     font-size: 41px;
 }
 
+/* iPhone */
+@media (min-width: 320px) and (max-width: 480px) {
+
+}
+
+/* iPhone 5 */
+@media (min-width: 320px) and (max-width: 568px) {
+
+}
+
+/* Tablet */
+@media (min-width: 600px) and (max-width: 800px) {
+
+}
+
+/* iPad 2, 3, mini */
+@media (min-width: 768px) and (max-width: 1024px) {
+}
