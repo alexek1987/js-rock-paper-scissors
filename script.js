@@ -29,6 +29,18 @@ selectionButtons.forEach(selectionButton => {
 })
 
 
+
+
+
+function clearText() {
+  const announcementDiv = document.getElementById("announceWinnerDiv")
+    const removeAnnouncementElement  = announcementDiv.querySelector("h1");
+    removeAnnouncementElement .remove()
+    // removeAnnouncementElement.innerText = ""
+}
+
+
+
 function makeSelection(selection) {
   const computerSelection = randomSelection()
   // const playerSelection = selection
@@ -38,7 +50,41 @@ function makeSelection(selection) {
   addSelectionResult(selection, playerWin)
   if (playerWin) incrementScore(playerScoreSpan)
   if (computerWin) incrementScore(computerScoreSpan)
+
+
+  // Set timeout for 1 seconds
+// then clear the text
+
+    function announcer() {
+    const announcementDiv = document.getElementById("announceWinnerDiv")
+    const newAnnouncementElement  = document.createElement("h1");
+    const playerWin = isWinner(selection, computerSelection)
+      if (playerWin) {
+
+        newAnnouncementElement.innerText = "You won";
+        announcementDiv.appendChild(newAnnouncementElement);
+        // console.log(newAnnouncementElement.innerText)
+
+      } if (computerWin) {
+        newAnnouncementElement.innerText = "You lost";
+        announcementDiv.appendChild(newAnnouncementElement);
+        // console.log(newAnnouncementElement.innerText);
+      } else {
+        newAnnouncementElement.innerText = "It's a tie";
+        announcementDiv.appendChild(newAnnouncementElement);
+
+      }
+
+
+    }
+  announcer()
+  window.setTimeout(clearText, 1000);
+
 }
+
+
+
+
 
 function incrementScore(scoreSpan) {
   scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
@@ -54,7 +100,9 @@ function addSelectionResult(selection, winner) {
 
 
 function isWinner(selection, opponentSelection) {
+
   return selection.beats === opponentSelection.name
+
 }
 
 function randomSelection() {

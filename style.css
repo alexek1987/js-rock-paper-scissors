@@ -33,6 +33,7 @@ body {
   align-items: center;
   justify-items: center;
 
+
 }
 
 .result-score {
@@ -40,11 +41,13 @@ body {
   font-size: 3rem;
   color: #333;
 
+
 }
 
 .result-history {
   opacity: .5;
   margin-right: 3px;
+
 }
 
 .result-history.winner {
@@ -58,21 +61,18 @@ body {
     font-size: 41px;
 }
 
-/* iPhone */
-@media (min-width: 320px) and (max-width: 480px) {
+#announceWinnerDiv > h1 {
 
-}
+  color: white;
+  font-family: 'Londrina Solid';
+  position: absolute;
 
-/* iPhone 5 */
-@media (min-width: 320px) and (max-width: 568px) {
+  font-size: 50px;
 
-}
+  padding: 20px;
+  z-index: 999;
 
-/* Tablet */
-@media (min-width: 600px) and (max-width: 800px) {
 
-}
+  margin-left: 244px;
 
-/* iPad 2, 3, mini */
-@media (min-width: 768px) and (max-width: 1024px) {
 }
